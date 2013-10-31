@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Application" representedClassName="Application" syncable="YES">
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="newRelationship3" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Note" representedClassName="Notes" syncable="YES">
+        <attribute name="addedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="addedEvent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addedLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nextSteps" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="newRelationship1" inverseEntity="User" syncable="YES"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Application" syncable="YES"/>
+    </entity>
+    <entity name="Skill" representedClassName="Skills" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userSkills" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="newRelationship" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="Users" syncable="YES">
+        <attribute name="companyPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currentCompany" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currentPosition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="education" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="facebookCompanyPage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="linkedin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobilePhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="otherPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pastCompany" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pastPosition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Skill" inverseName="userSkills" inverseEntity="Skill" syncable="YES"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="newRelationship" inverseEntity="Note" syncable="YES"/>
+        <relationship name="newRelationship3" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Application" inverseName="newRelationship" inverseEntity="Application" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Application" positionX="-5474" positionY="-814" width="128" height="58"/>
+        <element name="Note" positionX="-5472" positionY="-720" width="128" height="148"/>
+        <element name="Skill" positionX="-5474" positionY="-981" width="128" height="73"/>
+        <element name="User" positionX="-5771" positionY="-1069" width="128" height="298"/>
+    </elements>
+</model>
